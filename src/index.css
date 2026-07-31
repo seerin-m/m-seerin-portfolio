@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Custom Soft Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 24, 20, 0.7);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(164, 188, 173, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(195, 154, 95, 0.5);
+}
+
+/* Spa Glassmorphism & Soft Ambient Panels */
+.spa-card {
+  background: rgba(27, 42, 35, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(164, 188, 173, 0.12);
+}
+
+.spa-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.spa-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(195, 154, 95, 0.4);
+  box-shadow: 0 16px 40px -12px rgba(15, 24, 20, 0.6), 0 0 20px 0 rgba(195, 154, 95, 0.08);
+}
+
+/* Light Theme Adjustments */
+.light {
+  background-color: #f7f2e8;
+  color: #1b2a23;
+}
+
+.light .spa-card {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(57, 81, 68, 0.12);
+}
+
+.light .spa-card-hover:hover {
+  border-color: rgba(92, 127, 107, 0.4);
+  box-shadow: 0 16px 30px -10px rgba(57, 81, 68, 0.12);
+}

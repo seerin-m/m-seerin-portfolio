@@ -1,0 +1,7 @@
+import React from 'react';
+import * as LucideIcons from 'lucide-react';
+
+export default function Icon({ name, className = "w-5 h-5", ...props }) {
+  const IconComponent = LucideIcons[name] || LucideIcons.Sparkles;
+  return <IconComponent className={className} {...props} />;
+}
